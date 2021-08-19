@@ -2,9 +2,11 @@ const express = require('express');
 
 const app = express();
 
-const port = process.env.port || 3000;
+const port = 8081;
 
 app.get('/',(req,res)=>{
     res.send('express-beanstalk-app is running');
 });
-app.listen(port);
+app.listen(port,()=>{
+ console.log('Listening at port '+port);   
+});
